@@ -1,0 +1,87 @@
+<!DocType HTML>
+<html>
+<head>
+   <title> Happy BirthDay </title>
+   <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body>
+    <div class="container-fluid">
+    <header>
+ <video autoplay id="Welcome"  >
+     <source src="videos\Man.3gpp" type="video/mp4">
+ </video>
+ <div class="container">
+    <i data-toggle="popover" data-trigger="manual" data-content="I wanted to text you...but!!!" class="tip-container" title="WhatsApp" data-placement="right"></i>
+  </div>
+ </header>
+
+
+ <div class="content">
+     <button id="myBtn" data-toggle="button" class="pop" onclick="myFunction()" > Pause</button>
+     <button id="button" class="float-left submit-button"> Next</button>
+ </div>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script>
+    var video=document.getElementById("Welcome");
+    var btn=document.getElementById("myBtn");
+
+    $(document).ready(function(){
+        video.pause();
+            btn.innerHTML="Play";  
+});
+  
+
+    function myFunction(){
+        if(video.paused){
+            video.play();
+            btn.innerHTML="Pause";
+        }
+        else {
+            video.pause();
+            btn.innerHTML="Play";
+        }
+        
+        //$('[Data-toggle="popover"]').popover('show');
+    }
+
+ $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+$(function () {
+  $('[data-toggle="popover"]').popover({
+        delay: {show: 6000, hide: 1000 },
+        html: true,
+        template: '<div class="popover"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div><div class="popover-footer"><a href="#" class="btn btn-success btn-sm">Send</a></div></div>'
+  }
+  )
+})
+
+$('#myBtn').on('click', function()
+{    
+    $('.tip-container').popover('toggle');
+    
+});
+
+$(document).ready(function(){
+  $("#button").click(function(){
+    $("body").fadeOut();
+    location.href = "second.html";
+  });
+});
+
+</script>
+
+</body>   
+</html>

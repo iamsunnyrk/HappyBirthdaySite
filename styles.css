@@ -1,0 +1,67 @@
+body {
+	background-color:lightyellow;
+}
+
+#myBtn {
+	width: 200px;
+	font-size: 18px;
+	padding: 10px;
+	border: none;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+  }
+  .content {
+	color: #f1f1f1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 130px;
+  }
+
+  #myBtn:hover {
+	background: #ddd;
+	color: black;
+  }
+header {
+	position: relative;
+	height: 85vh;
+	width: 100%;
+	overflow: hidden;
+  }
+
+  header video {
+	position: absolute;
+    top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	/*width: auto;
+	height: auto;
+	z-index: 0;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%); */
+	transform: translateX(-50%) translateY(-50%); 
+  }
+  
+  header .container {
+	position: relative;
+	z-index: 2;
+	height: 200px;
+	width: 100%;
+	left:45%;
+	top:10%;
+  }
+
+  .popover{
+    width:200px;   
+}
+
+.popover-header{
+	justify-content: center;
+}
+.popover-footer{
+	margin-bottom: 10px;
+	margin-left:125px;
+}
